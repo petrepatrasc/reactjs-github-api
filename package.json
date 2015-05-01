@@ -1,0 +1,28 @@
+{
+  "name": "reactjs-github-api",
+  "version": "1.0.0",
+  "description": "A simple project in which I try to learn more about the ReactJS framework.",
+  "main": "dist/js/main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/petrepatrasc/reactjs-github-api.git"
+  },
+  "author": "Petre Pătrașc <petre@dreamlabs.ro>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petrepatrasc/reactjs-github-api/issues"
+  },
+  "homepage": "https://github.com/petrepatrasc/reactjs-github-api",
+  "dependencies": {
+    "es6-promise": "^2.1.1",
+    "gulp": "^3.8.11",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.5.2",
+    "jest-cli": "^0.4.0",
+    "react": "^0.13.2",
+    "reactify": "^1.1.0"
+  }
+}
