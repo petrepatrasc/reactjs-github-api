@@ -1,11 +1,14 @@
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
 @import 'profile';
 
-#app-container {
-  border: 1px solid #c9c9c9;
-  box-shadow: 0 0 10px #e3e3e3;
+body {
+  background-image: url('../images/confectionary.png');
+}
 
-  .profile-hidden {
-    display: none;
-  }
+#app-container {
+  background-color: #fff;
+  border: 1px solid #c9c9c9;
+  box-shadow: 0 0 10px #c9c9c9;
+  margin-top: 2em;
+  padding-bottom: 2em;
 }

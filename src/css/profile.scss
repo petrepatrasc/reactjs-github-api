@@ -1,4 +1,9 @@
 $fullNameFontSize: 140%;
+$organisationAvatarSize: 30px;
+
+.profile-hidden {
+  display: none;
+}
 
 .profile-info-component {
   @extend .col-lg-3;
@@ -36,5 +41,19 @@ $fullNameFontSize: 140%;
       @extend .btn;
       @extend .btn-primary;
     }
+  }
+}
+
+.profile-org-component {
+  @extend .col-lg-3;
+
+  .profile-org-entry {
+    margin-bottom: 1em;
+  }
+
+  .profile-org-avatar {
+    width: $organisationAvatarSize;
+    height: $organisationAvatarSize;
+    margin-right: 0.5em;
   }
 }

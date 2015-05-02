@@ -3,13 +3,7 @@ var React = require('react');
 var AppActions = require('../actions/app-actions');
 
 var ProfileLocator = React.createClass({
-    getInitialState: function() {
-        return {
-            username: ""
-        }
-    },
-
-    handleChange: function(event) {
+    handleChange: function (event) {
         var username = event.target.value;
 
         this.setState({
@@ -17,7 +11,7 @@ var ProfileLocator = React.createClass({
         });
     },
 
-    handleSubmit: function(event) {
+    handleSubmit: function (event) {
         event.preventDefault();
 
         var username = this.state.username;
@@ -28,7 +22,8 @@ var ProfileLocator = React.createClass({
         return (
             <form className="form" onSubmit={this.handleSubmit}>
                 <div className="input-group">
-                    <input value={this.state.username} onChange={this.handleChange} type="text" className="form-control" placeholder="Recipient's username"
+                    <input onChange={this.handleChange} type="text" className="form-control"
+                           placeholder="Recipient's username"
                            aria-describedby="basic-addon2"/>
                     <span className="input-group-addon" id="basic-addon2">@github.com</span>
                 </div>

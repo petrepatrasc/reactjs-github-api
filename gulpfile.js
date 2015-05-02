@@ -22,6 +22,9 @@ gulp.task('browserify', function () {
 gulp.task('copy', function () {
     gulp.src('src/index.html')
         .pipe(gulp.dest('dist'));
+
+    gulp.src('src/images/**/*.*')
+        .pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('default', ['sass', 'browserify', 'copy']);

@@ -7,6 +7,8 @@ var AppConstants = require('../constants/app-constants');
 
 var CHANGE_EVENT = "change";
 
+var _username;
+
 var ProfileStore = objectAssign({}, EventEmitter.prototype, {
     addChangeListener: function (cb) {
         this.on(CHANGE_EVENT, cb);
@@ -19,6 +21,12 @@ var ProfileStore = objectAssign({}, EventEmitter.prototype, {
     },
     getProfileInfo: function (username) {
         return GitHubService.getProfileInfo(username);
+    },
+    getProfileOrganisations: function (username) {
+        return GitHubService.getProfileOrganisations(username);
+    },
+    getUsername: function (username) {
+        return _username;
     }
 });
 
@@ -27,6 +35,7 @@ AppDispatcher.register(function (payload) {
 
     switch (action.actionType) {
         case AppConstants.RETRIEVE_PROFILE:
+            _username = action.username;
             ProfileStore.emit(CHANGE_EVENT);
             break;
         default:

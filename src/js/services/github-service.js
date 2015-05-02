@@ -18,6 +18,21 @@ var GitHubService = {
         return repositories;
     },
 
+    getProfileOrganisations: function (username) {
+        var organisations = {};
+
+        if ('undefined' !== typeof username) {
+            $.ajax({
+                url: GITHUB_BASE + '/users/' + username + '/orgs',
+                async: false
+            }).done(function (response) {
+                organisations = response;
+            });
+        }
+
+        return organisations;
+    },
+
     getProfileInfo: function (username) {
         var profile = {};
 

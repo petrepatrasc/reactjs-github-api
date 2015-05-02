@@ -9,12 +9,6 @@ var GitHubRepos = React.createClass({
         }
     },
 
-    getDefaultProps: function() {
-        return {
-            username: "petrepatrasc"
-        }
-    },
-
     componentDidMount: function(){
         ProfileStore.addChangeListener(this._onChange);
     },
@@ -25,7 +19,7 @@ var GitHubRepos = React.createClass({
 
     _onChange: function(){
         this.setState({
-            repositories: ProfileStore.getProfileRepos(this.props.username)
+            repositories: ProfileStore.getProfileRepos(ProfileStore.getUsername())
         })
     },
 

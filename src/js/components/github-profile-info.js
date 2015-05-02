@@ -19,7 +19,7 @@ var GitHubProfileInfo = React.createClass({
 
     _onChange: function(){
         this.setState({
-            profile: ProfileStore.getProfileInfo(this.props.username)
+            profile: ProfileStore.getProfileInfo(ProfileStore.getUsername())
         })
     },
 

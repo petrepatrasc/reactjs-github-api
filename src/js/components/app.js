@@ -8,7 +8,7 @@ var App = React.createClass({
         return (
             <div id="profile-form-component">
                 <h1>GitHub Profile Viewer</h1>
-                <p>Just enter a name below and the information will be displayed.</p>
+                <p>Enter a GitHub username below and relevant information regarding the account will be displayed.</p>
 
                 <ProfileLocator username="petrepatrasc" />
                 <hr/>
