@@ -18,10 +18,13 @@
   "homepage": "https://github.com/petrepatrasc/reactjs-github-api",
   "dependencies": {
     "es6-promise": "^2.1.1",
+    "flux": "^2.0.3",
     "gulp": "^3.8.11",
     "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.5.2",
     "jest-cli": "^0.4.0",
+    "jquery": "^2.1.4",
+    "object-assign": "^2.0.0",
     "react": "^0.13.2",
     "reactify": "^1.1.0"
   }
