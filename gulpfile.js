@@ -6,6 +6,7 @@ var sass = require('gulp-sass');
 gulp.task('sass', function () {
     gulp.src('./src/css/*.scss')
         .pipe(sass())
+        .on('error', function(err){ console.log(err.message); })
         .pipe(concat('main.css'))
         .pipe(gulp.dest('./dist/css'));
 });
@@ -13,6 +14,7 @@ gulp.task('sass', function () {
 gulp.task('browserify', function () {
     gulp.src('src/js/main.js')
         .pipe(browserify({transform: 'reactify'}))
+        .on('error', function(err){ console.log(err.message); })
         .pipe(concat('main.js'))
         .pipe(gulp.dest('dist/js'));
 });
@@ -25,5 +27,6 @@ gulp.task('copy', function () {
 gulp.task('default', ['sass', 'browserify', 'copy']);
 
 gulp.task('watch', function () {
-    gulp.watch('src/**/*.*', ['default']);
+    gulp.watch('src/**/*.*', ['default'])
+        .on('error', function(err){ console.log(err.message); });
 })

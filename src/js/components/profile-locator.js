@@ -1,27 +1,12 @@
 /** @jsx React.DOM */
 var React = require('react');
 var AppActions = require('../actions/app-actions');
-var AppStore = require('../stores/app-store');
 
 var ProfileLocator = React.createClass({
     getInitialState: function() {
         return {
-            username: AppStore.getUsername()
-        };
-    },
-
-    componentDidMount: function(){
-        AppStore.addChangeListener(this._onChange);
-    },
-
-    componentWillUnmount: function(){
-        AppStore.removeChangeListener(this._onChange);
-    },
-
-    _onChange: function(){
-        this.setState({
-            username: AppStore.getUsername()
-        })
+            username: ""
+        }
     },
 
     handleChange: function(event) {

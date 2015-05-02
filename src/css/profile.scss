@@ -1,0 +1,40 @@
+$fullNameFontSize: 140%;
+
+.profile-info-component {
+  @extend .col-lg-3;
+
+  div {
+    margin: 0.3em 0;
+  }
+
+  .profile-info-avatar {
+    @extend .img-responsive;
+    @extend .img-rounded;
+  }
+
+  .profile-info-fullname {
+    font-size: $fullNameFontSize;
+    font-weight: bold;
+  }
+
+  .profile-info-company {
+    margin-top: 2em;
+  }
+}
+
+.profile-component {
+  @extend .row;
+}
+
+.profile-repos-component {
+  @extend .col-lg-6;
+
+  .profile-repos-entry {
+    margin-right: 0.3em;
+
+    .profile-repos-detail {
+      @extend .btn;
+      @extend .btn-primary;
+    }
+  }
+}

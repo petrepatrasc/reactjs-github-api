@@ -1,13 +1,9 @@
+@import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'profile';
+
 #app-container {
   border: 1px solid #c9c9c9;
   box-shadow: 0 0 10px #e3e3e3;
-
-  .profile-component {
-    .profile-photo {
-      width: 300px;
-      height: 300px;
-    }
-  }
 
   .profile-hidden {
     display: none;

@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 var React = require('react');
 var ProfileLocator = require('./profile-locator');
-var ProfileDisplay = require('./profile-display');
+var GitHubProfile = require('./github-profile');
 
 var App = React.createClass({
     render: function() {
@@ -10,9 +10,9 @@ var App = React.createClass({
                 <h1>GitHub Profile Viewer</h1>
                 <p>Just enter a name below and the information will be displayed.</p>
 
-                <ProfileLocator />
+                <ProfileLocator username="petrepatrasc" />
                 <hr/>
-                <ProfileDisplay />
+                <GitHubProfile username="petrepatrasc" />
             </div>
         );
     }
