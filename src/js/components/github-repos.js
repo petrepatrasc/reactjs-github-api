@@ -5,7 +5,7 @@ var ProfileStore = require('../stores/profile-store');
 var GitHubRepos = React.createClass({
     getInitialState: function() {
         return {
-            repositories: ProfileStore.getProfileRepos(this.props.username)
+            repositories: []
         }
     },
 

@@ -14,8 +14,7 @@ var ProfileLocator = React.createClass({
     handleSubmit: function (event) {
         event.preventDefault();
 
-        var username = this.state.username;
-        AppActions.retrieveProfile(username);
+        AppActions.retrieveProfile(this.state.username);
     },
 
     render: function () {

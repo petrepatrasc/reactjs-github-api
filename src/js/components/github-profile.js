@@ -16,21 +16,24 @@ var GitHubProfile = React.createClass({
 
     _onChange: function () {
         this.setState({
-            'displayClass': 'profile-visible'
+            displayClass: 'profile-visible',
+            username: ProfileStore.getUsername()
         });
     },
 
     getInitialState: function () {
         return {
-            displayClass: 'profile-hidden'
+            displayClass: 'profile-hidden',
+            username: this.props.username
         }
     },
+
     render: function () {
         return (
             <div className={this.state.displayClass + " profile-component"}>
-                <GitHubProfileInfo username={this.props.username}/>
-                <GitHubRepos username={this.props.username}/>
-                <GitHubOrganisations username={this.props.username}/>
+                <GitHubProfileInfo username={this.state.username}/>
+                <GitHubRepos username={this.state.username}/>
+                <GitHubOrganisations username={this.state.username}/>
             </div>
         );
     }

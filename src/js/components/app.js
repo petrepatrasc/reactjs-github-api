@@ -10,9 +10,9 @@ var App = React.createClass({
                 <h1>GitHub Profile Viewer</h1>
                 <p>Enter a GitHub username below and relevant information regarding the account will be displayed.</p>
 
-                <ProfileLocator username="petrepatrasc" />
+                <ProfileLocator />
                 <hr/>
-                <GitHubProfile username="petrepatrasc" />
+                <GitHubProfile />
             </div>
         );
     }

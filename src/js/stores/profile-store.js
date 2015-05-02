@@ -25,7 +25,7 @@ var ProfileStore = objectAssign({}, EventEmitter.prototype, {
     getProfileOrganisations: function (username) {
         return GitHubService.getProfileOrganisations(username);
     },
-    getUsername: function (username) {
+    getUsername: function () {
         return _username;
     }
 });

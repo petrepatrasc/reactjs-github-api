@@ -4,7 +4,7 @@ var ProfileStore = require('../stores/profile-store');
 var GitHubOrganisations = React.createClass({
     getInitialState: function () {
         return {
-            organisations: ProfileStore.getProfileOrganisations(this.props.username)
+            organisations: []
         }
     },
 
@@ -23,9 +23,9 @@ var GitHubOrganisations = React.createClass({
     },
 
     render: function () {
-        var organisations = this.state.organisations.map(function (organisation) {
+        var organisations = this.state.organisations.map(function (organisation, index) {
             return (
-                <div className="profile-org-entry">
+                <div key={index} className="profile-org-entry">
                     <a target="_blank" href={"http://github.com/" + organisation.login}>
                         <img src={organisation.avatar_url} className="profile-org-avatar"/>
                         <span className="profile-org-name">{organisation.login}</span>
